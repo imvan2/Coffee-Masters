@@ -1,0 +1,226 @@
+/* makes everything easier to measure */
+* {
+    box-sizing: border-box;
+}
+
+
+/* margin & padding pushes everything out to the side */
+/* by default, the body has margins */
+/* firefox has a color dropper */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #efefef;
+    font-family: "Open Sans", sans-serif;
+}
+
+.main-nav {
+    background-color: #43281c;
+    color: #fbf2c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+img {
+    height: 25px;
+    position: relative;
+    top: 3px;
+}
+
+.checkout-area {
+    grid-area: order;
+}
+
+.right-box {
+    grid-area: payment;
+}
+
+.name {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.payment {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.name-input {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: 2px solid #885a2d;
+    padding: 8px;
+    border-radius: 20px;
+    width: 100%;
+    text-indent: 18px;
+    font-size: 18px;
+}
+
+.input-label {
+    color: #885a2d;
+    background-color: #eee1d5;
+    font-size: 11px;
+    position: absolute;
+    left: 25px;
+    top: -7px;
+    padding: 0 2px;
+}
+
+.payment-input {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #885a2d;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    width: 100%;
+    text-indent: 18px;
+    font-size: 18px;
+}
+
+.payment-label {
+    color: #885a2d;
+    background-color: #eee1d5;
+    font-size: 11px;
+    position: absolute;
+    left: 25px;
+    top: -7px;
+    padding: 0 2px;
+
+}
+
+.ccv {
+    position: relative;
+    display: inline-block;
+    max-width: 200px;
+}
+
+.ccv-input {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #885a2d;
+    padding: 8px;
+    border-radius: 20px;
+    width: 100%;
+    text-indent: 18px;
+    font-size: 18px;
+}
+
+.ccv-label {
+    color: #885a2d;
+    background-color: #eee1d5;
+    font-size: 11px;
+    position: absolute;
+    left: 25px;
+    top: -7px;
+    padding: 0 2px;
+}
+
+.total-area {
+    grid-area: total;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page {
+    display: grid;
+    row-gap: 30px;
+    column-gap: 30px;
+    width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+    grid-template-areas:
+        "order payment"
+        "total total";
+    grid-template-columns: 1fr 1fr;
+}
+
+.box {
+    background-color: #eee1d5;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.box-title {
+    font-size: 16px;
+    color: #885a2d;
+    font-weight: normal;
+}
+
+.checkout-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-areas:
+        "quantity title price"
+        "quantity selection price";
+    border-bottom: 2px solid #DDB892;
+    padding: 10px 0;
+    row-gap: 8px;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.item-amount {
+    grid-area: quantity;
+}
+
+.item-title {
+    grid-area: title;
+    font-weight: bold;
+}
+
+.item-price {
+    grid-area: price;
+}
+
+.item-selections-list {
+    grid-area: selection;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #B08968;
+    font-size: 14px;
+}
+
+.item-selections {
+    margin-bottom: 5px;
+}
+
+.total {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+td:last-child {
+    text-align: right;
+    padding: 10px;
+}
+
+.final-total {
+    font-weight: bold;
+}
+
+button {
+    border-radius: 100px;
+    width: 100%;
+    background-color: #deb993;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+}
